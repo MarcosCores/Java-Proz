@@ -94,6 +94,7 @@ public class Variaveis {
 
 **Q1.** Desenvolva um programa utilizando uma condicional simples.
 ```
+![1 dox](https://github.com/user-attachments/assets/32b728bd-4ba4-4964-8e23-eb542121e569)
 
 ```
 **Q2.** Desenvolva um programa qualquer utilizando a condicional composta.
@@ -110,7 +111,77 @@ public class Variaveis {
 ```
 **Q5.** Desenvolva um programa onde o usuário informa um número de 1 a 12 e retorna o mês correspondente.
 ```
+import java.util.Scanner;
 
+public class exercicefive {
+    public static void main(String[] args) {
+        Scanner entradaDados = new Scanner(System.in);
+        System.out.println("Digite um número de 0-12:");
+        String mes = entradaDados.nextLine();
+        
+        switch (mes) {
+            case "1":
+              System.out.println("Janeiro");  
+              break;
+              
+            
+            case "2":
+              System.out.println("Fevereiro");  
+              break;
+
+            case "3":
+              System.out.println("Março");  
+              break;  
+              
+            case "4":
+              System.out.println("Abril");  
+              break;
+            
+            case "5":
+              System.out.println("Maio");  
+              break;  
+              
+            case "6":
+              System.out.println("Junho");  
+              break;  
+              
+            case "7":
+              System.out.println("Julho");  
+              break;  
+              
+            case "8":
+              System.out.println("Agosto");  
+              break;
+              
+            case "9":
+              System.out.println("Setembro");  
+              break;
+              
+            case "10":
+              System.out.println("Outubro");  
+              break; 
+              
+            case "11":
+              System.out.println("Novembro");  
+              break;  
+              
+            case "12":
+              System.out.println("Dezembro");  
+              break;  
+              
+              default:
+              System.out.println("Mês Inválido.");  
+              break;
+        }
+    
+        entradaDados.close();
+    
+    
+   
+   
+    }
+
+}
 ```
 **Q6.** Desenvolva um programa que pede as notas 1, 2 e 3 com pesos 2, 3 e 5, respectivamente, do aluno e faça o cálculo da média. Dependendo da nota, o programa retorna a seguinte mensagem:
 * se a media for entre 0.0 e 4.9: reprovado
