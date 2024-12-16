@@ -57,7 +57,7 @@ public class Variaveis {
         System.out.println("Nome: : " + texto);
         System.out.println("Idade: " + numeroInteiro);
         System.out.println("Altura: " + numeroDecimal);
-        System.out.println("Possuí CNH? : " + logica);
+        System.out.println("Possui CNH? : " + logica);
     }
 }
 
