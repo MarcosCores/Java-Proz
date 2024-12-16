@@ -39,6 +39,28 @@ Exercícios realizados durante a disciplina 'Desenvolvimento de Aplicações', m
 * Uma variável do tipo Número Decimal (ou ponto flutuante)
 * Uma variável do tipo Lógica
 ```
+public class Variaveis {
+    public static void main(String[] args) {
+        // Variável do tipo Texto
+        String texto = "Marcos Vinicius";
+
+        // Variável do tipo Número Inteiro
+        int numeroInteiro = 17;
+
+        // Variável do tipo Número Decimal
+        double numeroDecimal = 1.75;
+
+        // Variável do tipo Lógica
+        boolean logica = false;
+
+        // Impressão das variáveis
+        System.out.println("Nome: : " + texto);
+        System.out.println("Idade: " + numeroInteiro);
+        System.out.println("Altura: " + numeroDecimal);
+        System.out.println("Possuí CNH? : " + logica);
+    }
+}
+
 
 ```
 **Q6.** Para cada Operação abaixo, crie um programa que leia dois valores enviados pelo usuário, faça a operação indicada e retorne o valor final.
