@@ -136,34 +136,352 @@ public class Variaveis {
 
 **Q1.** Crie um programa que leia um vetor de números inteiros e exiba a soma de todos os elementos.
 ```
+import java.util.Scanner;
+public class Q1 {
 
+    public static void main(String[] args) {
+       
+        Scanner scanner = new Scanner(System.in);
+
+        // Lê o tamanho do vetor
+        System.out.print("Digite o tamanho do vetor: ");
+        int tamanho = scanner.nextInt();
+
+        // Declara o vetor
+        int[] numeros = new int[tamanho];
+
+        // Lê os elementos do vetor
+        System.out.println("Digite os elementos do vetor:");
+        for (int i = 0; i < tamanho; i++) {
+            numeros[i] = scanner.nextInt();
+        }
+
+        // Calcula a soma dos elementos
+        int soma = 0;
+        for (int num : numeros) {
+            soma += num;
+        }
+
+        // Exibe a soma
+        System.out.println("A soma dos elementos do vetor é: " + soma);
+
+        // Fecha o scanner
+        scanner.close();
+    }
+}
+    
 ```
 **Q2.** Faça um programa que leia um vetor de números inteiros e exiba o maior elemento presente no vetor.
 ```
+import java.util.Scanner;
+public class Q2 {
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        // Lê o tamanho do vetor
+        System.out.print("Digite o tamanho do vetor: ");
+        int tamanho = scanner.nextInt();
+
+        // Declara o vetor
+        int[] numeros = new int[tamanho];
+
+        // Lê os elementos do vetor
+        System.out.println("Digite os elementos do vetor:");
+        for (int i = 0; i < tamanho; i++) {
+            numeros[i] = scanner.nextInt();
+        }
+
+        // Inicializa a variável maior com o primeiro elemento do vetor
+        int maior = numeros[0];
+
+        // Encontra o maior elemento
+        for (int i = 1; i < tamanho; i++) {
+            if (numeros[i] > maior) {
+                maior = numeros[i];
+            }
+        }
+
+        // Exibe o maior elemento
+        System.out.println("O maior elemento do vetor é: " + maior);
+
+        // Fecha o scanner
+        scanner.close();
+    }
+
+}
 ```
 **Q3.** Faça um programa que leia um vetor de números inteiros e exiba a média dos elementos.
 ```
+import java.util.Scanner;
+public class Q3 {
 
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Lê o tamanho do vetor
+        System.out.print("Digite o tamanho do vetor: ");
+        int tamanho = scanner.nextInt();
+
+        // Declara o vetor
+        int[] numeros = new int[tamanho];
+
+        // Lê os elementos do vetor
+        System.out.println("Digite os elementos do vetor:");
+        int soma = 0; // Variável para armazenar a soma dos elementos
+        for (int i = 0; i < tamanho; i++) {
+            numeros[i] = scanner.nextInt();
+            soma += numeros[i]; // Calcula a soma dos elementos
+        }
+
+        // Calcula a média dos elementos
+        double media = (double) soma / tamanho;
+
+        // Exibe a média
+        System.out.println("A média dos elementos do vetor é: " + media);
+
+        // Fecha o scanner
+        scanner.close();
+    }
+    }
 ```
 **Q4.** Crie um programa que leia um vetor de números inteiros e verifique se todos os elementos são pares.
 ```
+import java.util.Scanner;
 
+public class Q4 {
+
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+
+        // Lê o tamanho do vetor
+        System.out.print("Digite o tamanho do vetor: ");
+        int tamanho = scanner.nextInt();
+
+        // Declara o vetor
+        int[] numeros = new int[tamanho];
+
+        // Lê os elementos do vetor
+        System.out.println("Digite os elementos do vetor:");
+        for (int i = 0; i < tamanho; i++) {
+            numeros[i] = scanner.nextInt();
+        }
+
+        // Verifica se todos os elementos são pares
+        boolean todosPares = true;
+        for (int num : numeros) {
+            if (num % 2 != 0) {
+                todosPares = false;
+                break; // Sai do laço ao encontrar o primeiro ímpar
+            }
+        }
+
+        // Exibe o resultado
+        if (todosPares) {
+            System.out.println("Todos os elementos são pares.");
+        } else {
+            System.out.println("Nem todos os elementos são pares.");
+        }
+
+        // Fecha o scanner
+        scanner.close();
+    }
+}
+ 
 ```
 **Q5.** Faça um programa que leia duas matrizes 2x2 e exiba a soma das duas matrizes.
 ```
+import java.util.Scanner;
+public class Q5 {
+    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
+        // Declara duas matrizes 2x2
+        int[][] matriz1 = new int[2][2];
+        int[][] matriz2 = new int[2][2];
+        int[][] matrizSoma = new int[2][2];
+
+        // Lê os elementos da primeira matriz
+        System.out.println("Digite os elementos da primeira matriz 2x2:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                matriz1[i][j] = scanner.nextInt();
+            }
+        }
+
+        // Lê os elementos da segunda matriz
+        System.out.println("Digite os elementos da segunda matriz 2x2:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                matriz2[i][j] = scanner.nextInt();
+            }
+        }
+
+        // Calcula a soma das duas matrizes
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                matrizSoma[i][j] = matriz1[i][j] + matriz2[i][j];
+            }
+        }
+
+        // Exibe a soma das matrizes
+        System.out.println("A soma das duas matrizes é:");
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                System.out.print(matrizSoma[i][j] + " ");
+            }
+            System.out.println(); // Pula para a próxima linha
+        }
+
+        // Fecha o scanner
+        scanner.close();
+    }
+    }
 ```
 
 ### **Projetos POO - Programação Orientada a Objetos**
 
 :brain: _Calculadora:_ Crie uma calculadora simples que realiza operações aritméticas básicas (adição, subtração, multiplicação e divisão).
 ```
+import java.util.Scanner;
+public class calculadora {
 
+    public static void main(String[] args) throws Exception {
+        
+        //Boas vindas ao usuário.
+        System.out.println("Seja bem vindo a calculadora!\n");
+        System.out.println("Escolha uma das quatros operações abaixo:\n");
+        System.out.println("1- Adição\n2- Subtração\n3- Multiplicação\n4- Divisão\n");
+
+        //Criando escanner.
+        Scanner input = new Scanner(System.in);
+        
+        int calculo = input.nextInt();
+
+        System.out.println("calculo = " + calculo );
+        System.out.println("Digite o primeiro número:\n");
+        int num1 = input.nextInt();
+        System.out.println("Digite o segundo número:\n");
+        int num2 = input.nextInt();
+        int result = num1 - num2;
+        int resulta = num1 + num2;
+        switch (calculo) {
+        
+        //Adição.
+        case 1:
+        
+        System.out.println("O resultado da Adição é:" + resulta);
+            
+            break;
+    
+               
+        //Subtração.
+        case 2:
+        
+        System.out.println("O resultado da subtração é:" + result);
+                
+            break;
+        
+         //Multiplicação.    
+        case 3:
+        
+        System.out.println("O resultado da Multiplicação é:" + num1 * num2);
+                
+            break;
+        
+        
+
+        //Divisão
+        case 4:
+        
+        System.out.println("O resultado da Divisão é:" + num1 / num2);
+                
+            break;
+        
+        default:
+        System.out.println("opção inválida, Digite algo correspondente.");
+            break;  
+    }
+    
+    input.close();
+    
+    }
+    
+}
 ```
 :brain: _Conversor de unidades:_ Desenvolva um programa que converta unidades de medida como temperatura (Celsius para Fahrenheit e vice-versa) e distância (metros para quilômetros e vice-versa).
 ```
+import java.util.Scanner;
 
+public class conversor_unidades {
+
+    // Método para converter Celsius para Fahrenheit
+    public static double celsiusParaFahrenheit(double celsius) {
+        return (celsius * 9/5) + 32;
+    }
+
+    // Método para converter Fahrenheit para Celsius
+    public static double fahrenheitParaCelsius(double fahrenheit) {
+        return (fahrenheit - 32) * 5/9;
+    }
+
+    // Método para converter Metros para Quilômetros
+    public static double metrosParaQuilometros(double metros) {
+        return metros / 1000;
+    }
+
+    // Método para converter Quilômetros para Metros
+    public static double quilometrosParaMetros(double quilometros) {
+        return quilometros * 1000;
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Conversor de Unidades");
+        System.out.println("Escolha a conversão:");
+        System.out.println("1. Celsius para Fahrenheit");
+        System.out.println("2. Fahrenheit para Celsius");
+        System.out.println("3. Metros para Quilômetros");
+        System.out.println("4. Quilômetros para Metros");
+        int escolha = scanner.nextInt();
+
+        double valorEntrada;
+        double valorConvertido;
+
+        switch (escolha) {
+            case 1:
+                System.out.print("Digite a temperatura em Celsius: ");
+                valorEntrada = scanner.nextDouble();
+                valorConvertido = celsiusParaFahrenheit(valorEntrada);
+                System.out.println("Temperatura em Fahrenheit: " + valorConvertido);
+                break;
+            case 2:
+                System.out.print("Digite a temperatura em Fahrenheit: ");
+                valorEntrada = scanner.nextDouble();
+                valorConvertido = fahrenheitParaCelsius(valorEntrada);
+                System.out.println("Temperatura em Celsius: " + valorConvertido);
+                break;
+            case 3:
+                System.out.print("Digite a distância em metros: ");
+                valorEntrada = scanner.nextDouble();
+                valorConvertido = metrosParaQuilometros(valorEntrada);
+                System.out.println("Distância em quilômetros: " + valorConvertido);
+                break;
+            case 4:
+                System.out.print("Digite a distância em quilômetros: ");
+                valorEntrada = scanner.nextDouble();
+                valorConvertido = quilometrosParaMetros(valorEntrada);
+                System.out.println("Distância em metros: " + valorConvertido);
+                break;
+            default:
+                System.out.println("Escolha inválida.");
+        }
+
+        scanner.close();
+    }
+}
 ```
 :brain: _Jogo de adivinhação:_ Crie um jogo onde o computador escolhe um número aleatório entre 1 e 100 e o usuário tenta adivinhá-lo. O programa deve fornecer dicas como "é maior" ou "é menor".
 ```
@@ -171,6 +489,27 @@ public class Variaveis {
 ```
 :brain: _Gerador de senhas:_ Crie um programa onde o usuário informa a quantidade de caracteres e o programa gere uma senha aleatória que possua letras maiúsculas, letras minúsculas, números e caracteres especiais.
 ```
+import java.util.Random;
+import java.util.Scanner;
+
+public class gerador_senha {
+public static void main (String[]args){
+    Scanner input = new Scanner(System.in);
+
+    System.out.println("Informe o tamanho da sua senha:");
+    int comprimento = input.nextInt();
+    String caracteres = "ABCDEFGHIGKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%&*/";
+
+    StringBuilder senha = new StringBuilder();
+    Random random = new Random();
+    for (int i = 0; i < comprimento; i++) {
+        int indice = random.nextInt(caracteres.length());
+        senha.append(caracteres.charAt(indice));
+    }
+    System.out.println("Senha gerada!:" + senha.toString());
+    input.close();
+
+}
 
 ```
 :brain: _SmartTv:_ Crie um sistema de uma SmartTv, onde o usuário pode realizar as seguintes tarefas:
@@ -181,6 +520,100 @@ public class Variaveis {
 * Diminuir canal
 * Mudar Canal
 ```
+public class TV_smart {
 
+    private boolean ligada;
+    private int volume;
+    private int canal;
+
+    public TV_smart() {
+        this.ligada = false;
+        this.volume = 10; // Volume inicial padrão
+        this.canal = 1;   // Canal inicial padrão
+    }
+
+    // Método para ligar ou desligar a TV
+    public void ligarDesligar() {
+        this.ligada = !this.ligada;
+        if (this.ligada) {
+            System.out.println("TV ligada.");
+        } else {
+            System.out.println("TV desligada.");
+        }
+    }
+
+    // Método para aumentar o volume
+    public void aumentarVolume() {
+        if (this.ligada) {
+            if (this.volume < 100) {
+                this.volume++;
+                System.out.println("Volume aumentado para: " + this.volume);
+            } else {
+                System.out.println("Volume máximo atingido.");
+            }
+        } else {
+            System.out.println("Ligue a TV primeiro.");
+        }
+    }
+
+    // Método para diminuir o volume
+    public void diminuirVolume() {
+        if (this.ligada) {
+            if (this.volume > 0) {
+                this.volume--;
+                System.out.println("Volume diminuído para: " + this.volume);
+            } else {
+                System.out.println("Volume já está no mínimo.");
+            }
+        } else {
+            System.out.println("Ligue a TV primeiro.");
+        }
+    }
+
+    // Método para aumentar o canal
+    public void aumentarCanal() {
+        if (this.ligada) {
+            this.canal++;
+            System.out.println("Canal aumentado para: " + this.canal);
+        } else {
+            System.out.println("Ligue a TV primeiro.");
+        }
+    }
+
+    // Método para diminuir o canal
+    public void diminuirCanal() {
+        if (this.ligada) {
+            if (this.canal > 1) {
+                this.canal--;
+                System.out.println("Canal diminuído para: " + this.canal);
+            } else {
+                System.out.println("Você já está no canal mínimo.");
+            }
+        } else {
+            System.out.println("Ligue a TV primeiro.");
+        }
+    }
+
+    // Método para mudar diretamente para um canal específico
+    public void mudarCanal(int novoCanal) {
+        if (this.ligada) {
+            if (novoCanal > 0) {
+                this.canal = novoCanal;
+                System.out.println("Canal alterado para: " + this.canal);
+            } else {
+                System.out.println("Canal inválido.");
+            }
+        } else {
+            System.out.println("Ligue a TV primeiro.");
+        }
+    }
+
+    // Método para verificar o estado atual da TV
+    public void estadoAtual() {
+        System.out.println("TV está " + (this.ligada ? "ligada" : "desligada"));
+        System.out.println("Volume atual: " + this.volume);
+        System.out.println("Canal atual: " + this.canal);
+    }
+}
 ```
 
