@@ -94,20 +94,78 @@ public class Variaveis {
 
 **Q1.** Desenvolva um programa utilizando uma condicional simples.
 ```
-![1 dox](https://github.com/user-attachments/assets/32b728bd-4ba4-4964-8e23-eb542121e569)
+public class CondicionalSimples {
+    public static void main(String[] args) {
+        int numero = 18;
+
+        if (numero >= 18) {
+            System.out.println("Você já é maior de idade!");
+        }
+    }
+}
+
 
 ```
 **Q2.** Desenvolva um programa qualquer utilizando a condicional composta.
 ```
+public class CondicionalSimples {
+    public static void main(String[] args) {
+        int numero = 17;
+
+        if (numero >= 18) {
+            System.out.println("Você já é maior de idade!");
+        } else {
+            System.out.println("Você ainda é menor.");
+        }
+    }
+}
 
 ```
 **Q3.** Desenvolva um programa qualquer utilizando a condicional ternária.
 ```
 
+
+public class CondicionalTernaria {
+    public static void main(String[] args) {
+        int numero = 6;
+
+    // Utilizando a condicional ternária para verificar se o número é par ou ímpar
+    String resultado = (numero % 2 == 0) ? "Número par" : "Número ímpar";
+    System.out.println("O número + numero + é: + resultado);
+
+}
+
+
 ```
 **Q4.** Desenvolva um programa que pede para o usuário digitar o dia da semana. Se for sábado ou domingo, deve aparecer a mensagem "descanso", senão, deve aparecer a mensagem "estudar".
 ```
+public class DiaDaSemana {
+public static void main(String[] args) {
+    System.out.println(x:"Digite o dia da semana (segunda, terca, quarta, quinta, sexta, sabado ou domingo): ");
+    String dia = scanner.nextLine().toLowerCase(); // Converter para minúsculas para facilitar a comparação
 
+
+        switch (dia) {
+            case "sabado":
+            case "domingo":
+            System.out.println(x: "Descanso");
+            break;
+
+            case "segunda":
+            case "terca":
+            case "quarta":
+            case "quinta":
+            case "sexta":
+            System.out.println(x: "Estudar");
+            break;
+
+            default:
+            System.out.println(x: "Dia inválido. Tente novamente.");
+        }
+
+scanner.close();
+    }
+}
 ```
 **Q5.** Desenvolva um programa onde o usuário informa um número de 1 a 12 e retorna o mês correspondente.
 ```
@@ -188,19 +246,98 @@ public class exercicefive {
 * se a media for entre 5.0 e 7.9: em recuperação
 * se a media for entre 8.0 e 10.0: aprovado
 ```
+import java.util.Scanner;
 
+public class MediaAluno {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Entrada das notas
+        System.out.print("Digite a nota 1 (peso 2): ");
+        double nota1 = scanner.nextDouble();
+        System.out.print("Digite a nota 2 (peso 3): ");
+        double nota2 = scanner.nextDouble();
+        System.out.print("Digite a nota 3 (peso 5): ");
+        double nota3 = scanner.nextDouble();
+
+        // Cálculo da média ponderada
+        double media = (nota1 * 2 + nota2 * 3 + nota3 * 5) / 10;
+
+        // Exibir a média
+        System.out.printf("Média: %.2f\n", media);
+
+        // Verificação da situação do aluno
+        if (media >= 0 && media < 4.9) {
+            System.out.println("Reprovado");
+        } else if (media >= 5 && media <= 7.9) {
+            System.out.println("Em recuperação");
+        } else if (media >= 8 && media <= 10) {
+            System.out.println("Aprovado");
+        } else {
+            System.out.println("Nota inválida");
+        }
+
+        scanner.close();
+    }
+}
 ```
 **Q7.** Crie um laço de repetição com que exiba os com os números de 1 até 10 em ordem crescente e depois em ordem decrescente.
 ```
+public class exerciceseven {
+    public static void main(String[] args) {
+        for (int i = 1; i < 11; i++) {
+            System.out.println(i);
+        }
 
+        for (int i = 10; i > 0; i--) {
+            System.out.println(i);
+        }
+    }
+}
 ```
 **Q8.** Crie um laço de repetição que exiba os com os números pares de 10 até 50 em ordem crescente e depois em ordem decrescente.
 ```
+public class exercice_eight {
+    public static void main(String[] args) {
+        for (int i = 10; i < 50; i++) {
+            System.out.println(i);
+        }
 
+        for (int i = 50; i > 9; i--) {
+            System.out.println(i);
+        }
+    }
+}
+```
 ```
 **Q9.** Utilizando um laço de repetição, desenvolva um programa que exiba a tabuada de 1 a 10. Para isso, peça para o usuário escolher um número de 1 a 10. Se o usuário digitar um valor fora desse intervalo, deve aparecer a seguinte mensagem de erro: “Digite um valor entre 1 e 10.” A tela esperada deve conter os valores da tabuada para o número digitado pelo usuário.
 ```
+import java.util.Scanner;
 
+public class exercicenine {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int numero;
+
+        // Loop para garantir que o número está entre 1 e 10
+        do {
+            System.out.print("Digite um número entre 1 e 10: ");
+            numero = scanner.nextInt();
+
+            if (numero < 1 || numero > 10) {
+                System.out.println("Digite um valor entre 1 e 10.");
+            }
+        } while (numero < 1 || numero > 10);
+
+        // Exibe a tabuada do número escolhido
+        System.out.println("Tabuada do " + numero + ":");
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(numero + " x " + i + " = " + (numero * i));
+        }
+
+        scanner.close();
+    }
+}
 ```
 
 ### **Vetores e Matrizes**
