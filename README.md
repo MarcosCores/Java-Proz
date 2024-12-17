@@ -19,18 +19,35 @@ Exercícios realizados durante a disciplina 'Desenvolvimento de Aplicações', m
 ```
 **Q1.** Explique como criar um diretório para projetos Java e quais são as Convenções para sua criação. Envie os prints do passo a passo.
 ```
+CTRL + SHIFT + P = BARRA DE PESQUISA;
+JAVA;
+CREATE JAVA PROJECT;
+NO BUILD TOOLS;
+SELECIONAR A PASTA CRIADA NO DESKTOP.
 
 ```
 **Q2.** Explique o que é e dê um exemplo de uma Classe em Java e quais são as Convenções para sua declaração.
 ```
+UMA CLASSE É UM ELEMENTO DO CÓDIGO JAVA, UTILIZADO PARA REPRESENTAR OBJETOS DO MUNDO REAL ; ONDE SE DECLARA ATRIBUTOS E MÉTODOS. 
+
+Regras para nomeação de classes:
+Ao nomear uma classe algumas convenções devem ser seguidas: Manter o nome simples e descritivo; Usar palavras inteiras - sem siglas e abreviações; A primeira letra de cada palavra deve estar em caixa alta - String
 
 ```
 **Q3.** Explique o que é e dê um exemplo de um Método em Java e quais são as Convenções para sua declaração.
 ```
+EM GERAL, MÉTODO EM JAVA É A MANEIRA DE EXECUTAR UMA DEVIDA TAREFA ESPECÍFICA - PARA CHAMAR UM MÉTODO EM JAVA, BASTA ESCREVER O NOME DO MÉTODO SEGUIDO DE DOIS PARÊNTESES () E UM PONTO E VÍRGULA (;)  ex: 
+
+String name = "Mary";
+printName(name);
 
 ```
 **Q4.** Quais são as Convenções para a declaração de uma variável em Java?
 ```
+O nome da variável deve começar com uma letra, sublinhado (_)ou cifrão ($).
+Após o primeiro caractere, o nome da variável pode incluir letras, dígitos, sublinhados (_) ou cifrões ($).
+Java é sensível a maiúsculas e minúsculas, ou seja, "idade" e "Idade" seriam consideradas variáveis diferentes.
+Não é permitido usar palavras reservadas da linguagem Java como nomes de variáveis.
 
 ```
 **Q5.** Envie um programa com a classe "Variáveis" que imprima 4 variáveis:
@@ -42,7 +59,7 @@ Exercícios realizados durante a disciplina 'Desenvolvimento de Aplicações', m
 public class Variaveis {
     public static void main(String[] args) {
         // Variável do tipo Texto
-        String texto = "Marcos Vinicius";
+        String nome = "Marcos Vinicius";
 
         // Variável do tipo Número Inteiro
         int numeroInteiro = 17;
@@ -83,7 +100,12 @@ public class Variaveis {
 ```
 **Q9.** Crie um programa que retorne um número aleatório.
 ```
-
+public class zeroum{
+    public static void main(String[] args {
+    int randomNum = (int)(Math.random() * 101); // 0 a 100
+    System.out.println(randomNum);
+    }
+}
 ```
 **Q10.** Crie um programa com operadores lógicos e relacionais.
 ```
