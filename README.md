@@ -7,14 +7,101 @@ Exercícios realizados durante a disciplina 'Desenvolvimento de Aplicações', m
 
 **Q1.** Crie um programa cujo objetivo é inserir seus dados pessoais (nome, idade, gênero e cidade) e armazenar em cada variável determinada e depois exibidos na tela.
 ```
+import java.util.Scanner;
+
+public class DadosPessoais {
+    public static void main(String[] args) {
+        // Criação do objeto Scanner para leitura dos dados
+        Scanner scanner = new Scanner(System.in);
+
+        // Declaração das variáveis
+        String nome;
+        int idade;
+        char genero;
+        String cidade;
+
+        // Entrada de dados
+        System.out.print("Digite seu nome: ");
+        nome = scanner.nextLine();
+
+        System.out.print("Digite sua idade: ");
+        idade = scanner.nextInt();
+        scanner.nextLine(); // Consumir a quebra de linha após o nextInt
+
+        System.out.print("Digite seu gênero (M/F): ");
+        genero = scanner.next().charAt(0);
+        scanner.nextLine(); // Consumir a quebra de linha
+
+        System.out.print("Digite a cidade onde você mora: ");
+        cidade = scanner.nextLine();
+
+        // Exibição dos dados
+        System.out.println("\n--- Dados Pessoais ---");
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+        System.out.println("Gênero: " + genero);
+        System.out.println("Cidade: " + cidade);
+
+        // Fechar o Scanner
+        scanner.close();
+    }
+}
 
 ```
 **Q2.** Dado o cálculo 12 x 3 + 4 - 8 / 2 % 3, qual o resultado segundo a precedência de operadores?
 ```
+public class PrecedenciaOperadores {
+    public static void main(String[] args) {
+        // Cálculo da expressão
+        int resultado = 12 * 3 + 4 - 8 / 2 % 3;
+
+        // Exibição do resultado
+        System.out.println("O resultado da expressão 12 * 3 + 4 - 8 / 2 % 3 é: " + resultado);
+    }
+}
 
 ```
 **Q3.** Crie um programa que utilize os métodos de Strings, onde o usuário envia uma frase e o programa exibe as informações dessa frase (tamanho, letra maiúscula, letra minúscula, substring e index).
 ```
+import java.util.Scanner;
+
+public class ManipulacaoStrings {
+    public static void main(String[] args) {
+        // Criação do Scanner para entrada de dados
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário uma frase
+        System.out.print("Digite uma frase: ");
+        String frase = scanner.nextLine();
+
+        // Tamanho da frase
+        int tamanho = frase.length();
+        System.out.println("Tamanho da frase: " + tamanho);
+
+        // Conversão para maiúsculas
+        String maiuscula = frase.toUpperCase();
+        System.out.println("Frase em maiúsculas: " + maiuscula);
+
+        // Conversão para minúsculas
+        String minuscula = frase.toLowerCase();
+        System.out.println("Frase em minúsculas: " + minuscula);
+
+        // Substring (por exemplo, do índice 5 até o final da frase)
+        String substring = frase.substring(5);
+        System.out.println("Substring a partir do índice 5: " + substring);
+
+        // Encontrando o índice de um caractere (exemplo: letra 'a')
+        int index = frase.indexOf('a');
+        if (index != -1) {
+            System.out.println("Índice do primeiro caractere 'a': " + index);
+        } else {
+            System.out.println("Caractere 'a' não encontrado na frase.");
+        }
+
+        // Fechar o Scanner
+        scanner.close();
+    }
+}
 
 ```
 **Q1.** Explique como criar um diretório para projetos Java e quais são as Convenções para sua criação. Envie os prints do passo a passo.
@@ -88,14 +175,121 @@ public class Variaveis {
 * Módulo
 * Concatenação
 ```
+import java.util.Scanner;
+
+public class OperacoesBasicas {
+    public static void main(String[] args) {
+        // Criação do Scanner para entrada de dados
+        Scanner scanner = new Scanner(System.in);
+
+        // Leitura dos dois valores
+        System.out.print("Digite o primeiro valor: ");
+        double valor1 = scanner.nextDouble();
+        System.out.print("Digite o segundo valor: ");
+        double valor2 = scanner.nextDouble();
+
+        // Soma
+        double soma = valor1 + valor2;
+        System.out.println("Soma: " + soma);
+
+        // Subtração
+        double subtracao = valor1 - valor2;
+        System.out.println("Subtração: " + subtracao);
+
+        // Multiplicação
+        double multiplicacao = valor1 * valor2;
+        System.out.println("Multiplicação: " + multiplicacao);
+
+        // Divisão (verificação para evitar divisão por zero)
+        if (valor2 != 0) {
+            double divisao = valor1 / valor2;
+            System.out.println("Divisão: " + divisao);
+        } else {
+            System.out.println("Divisão: Não é possível dividir por zero!");
+        }
+
+        // Módulo
+        double modulo = valor1 % valor2;
+        System.out.println("Módulo: " + modulo);
+
+        // Concatenação (Convertendo os números para String)
+        String concatenacao = String.valueOf(valor1) + String.valueOf(valor2);
+        System.out.println("Concatenação: " + concatenacao);
+
+        // Fechar o Scanner
+        scanner.close();
+    }
+}
 
 ```
 **Q7.** Crie um programa que utilize os métodos de Strings, onde o usuário envia uma frase e o programa exiba as informações dessa frase (tamanho, letra maiúscula, letra minúscula, substring e index).
 ```
+import java.util.Scanner;
+
+public class ManipulacaoStrings {
+    public static void main(String[] args) {
+        // Criação do Scanner para entrada de dados
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário uma frase
+        System.out.print("Digite uma frase: ");
+        String frase = scanner.nextLine();
+
+        // Tamanho da frase
+        int tamanho = frase.length();
+        System.out.println("Tamanho da frase: " + tamanho);
+
+        // Conversão para maiúsculas
+        String maiuscula = frase.toUpperCase();
+        System.out.println("Frase em maiúsculas: " + maiuscula);
+
+        // Conversão para minúsculas
+        String minuscula = frase.toLowerCase();
+        System.out.println("Frase em minúsculas: " + minuscula);
+
+        // Substring (por exemplo, do índice 5 até o final da frase)
+        String substring = frase.substring(5);
+        System.out.println("Substring a partir do índice 5: " + substring);
+
+        // Encontrando o índice de um caractere (exemplo: letra 'a')
+        int index = frase.indexOf('a');
+        if (index != -1) {
+            System.out.println("Índice do primeiro caractere 'a': " + index);
+        } else {
+            System.out.println("Caractere 'a' não encontrado na frase.");
+        }
+
+        // Fechar o Scanner
+        scanner.close();
+    }
+}
 
 ```
 **Q8.** Crie um programa que utilize os métodos de Matemática, onde o usuário envia uma número decimal x e o programa exiba o valor absoluto de x e o quadrado  de x.
 ```
+import java.util.Scanner;
+
+public class OperacoesMatematicas {
+    public static void main(String[] args) {
+        // Criação do Scanner para entrada de dados
+        Scanner scanner = new Scanner(System.in);
+
+        // Solicita ao usuário um número decimal
+        System.out.print("Digite um número decimal: ");
+        double numero = scanner.nextDouble();
+
+        // Calcula o valor absoluto
+        double valorAbsoluto = Math.abs(numero);
+        System.out.println("Valor absoluto: " + valorAbsoluto);
+
+        // Calcula o quadrado
+        double quadrado = Math.pow(numero, 2);
+        System.out.println("Quadrado de " + numero + ": " + quadrado);
+
+        // Fechar o Scanner
+        scanner.close();
+    }
+}
 
 ```
 **Q9.** Crie um programa que retorne um número aleatório.
@@ -109,6 +303,42 @@ public class zeroum{
 ```
 **Q10.** Crie um programa com operadores lógicos e relacionais.
 ```
+import java.util.Scanner;
+
+public class OperadoresLogicosERelacionais {
+    public static void main(String[] args) {
+        // Criação do Scanner para entrada de dados
+        Scanner scanner = new Scanner(System.in);
+
+        // Leitura de dois números inteiros
+        System.out.print("Digite o primeiro número: ");
+        int num1 = scanner.nextInt();
+        System.out.print("Digite o segundo número: ");
+        int num2 = scanner.nextInt();
+
+        // Operadores Relacionais
+        System.out.println("\nOperadores Relacionais:");
+        System.out.println("num1 > num2: " + (num1 > num2)); // Maior que
+        System.out.println("num1 < num2: " + (num1 < num2)); // Menor que
+        System.out.println("num1 == num2: " + (num1 == num2)); // Igual a
+        System.out.println("num1 != num2: " + (num1 != num2)); // Diferente de
+        System.out.println("num1 >= num2: " + (num1 >= num2)); // Maior ou igual a
+        System.out.println("num1 <= num2: " + (num1 <= num2)); // Menor ou igual a
+
+        // Operadores Lógicos
+        System.out.println("\nOperadores Lógicos:");
+        boolean condicao1 = num1 > 0 && num2 > 0; // E lógico
+        boolean condicao2 = num1 < 0 || num2 < 0; // OU lógico
+        boolean condicao3 = !(num1 == num2); // Não lógico
+
+        System.out.println("Ambos os números são positivos? (num1 > 0 E num2 > 0): " + condicao1);
+        System.out.println("Pelo menos um número é negativo? (num1 < 0 OU num2 < 0): " + condicao2);
+        System.out.println("Os números são diferentes? (num1 != num2): " + condicao3);
+
+        // Fechar o Scanner
+        scanner.close();
+    }
+}
 
 ```
 
